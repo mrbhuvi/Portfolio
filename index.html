@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhausaheb's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel\dist\assets\owl.theme.default.min.css">
+    <script src="owlcarousel\dist\owl.carousel.min.js"></script>
+  
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"> <B>Bhausaheb Shingade </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Bhausaheb Shingade</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets\ProfilePhoto.png" alt="Bhausaheb profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Bhausaheb Shingade</h1>
+        <h3><span id="typing-animation"></span></h3>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'DevOps Engineer ',
+						'Cloud Enthusiast ',
+						'Coder  ',
+            'Tech Blogger  ',
+            'Mastering DevOps for Cloud Excellence  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 100); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+         <br>
+         
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Bhausaheb_Shingade_DevOps_9096714492.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">
+            Contact Info
+          </button>
+        </div>
+        <br>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/bhausaheb-shingade-685789208/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/mrbhuvi/'"
+          />
+          <img
+            src="./assets/medium.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://medium.com/@mrbhuvi1'"
+          />
+          <img
+            src="./assets/leetcode.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://leetcode.com/u/mrbhuvi/'"
+          />
+          <img
+            src="./assets/hr.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://www.hackerrank.com/profile/mrbhuvi'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Substantial expertise in <br />AWS DevOps Engineer </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>BTech Computer Science</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Seasoned DevOps Engineer with a proven track record in automating deployments and managing cloud infrastructure on AWS and Kubernetes. Leveraging CI/CD pipelines, I streamline software delivery and ensure consistent quality. My proficiency in Linux systems administration, coupled with expertise in Terraform and scripting, enables efficient infrastructure provisioning and configuration management.
+
+            </p>
+          </div>
+        </div>
+        <div class="section__pic-container">
+          <img
+            src="./assets\about-PicMe.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">AWS  Services</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Compute</h3>
+                  <p>Amazon EC2 , Lamda</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Networking</h3>
+                  <p>VPC, Route 53,Subnets, LoadBalancer</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Storage & DB</h3>
+                  <p>S3,Glacier,RDS,EBS </p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Container orchestration</h3>
+                  <p>ECR, ECS, EKS</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Security </h3>
+                  <p>IAM , SG , NACL, ACL, CloudTrail ,Firewall</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>IaC & Other</h3>
+                  <p>Terraform, AWS cli , CloudWatch, AutoScaling, Baston Host</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">DevOps & Automation</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Version Control</h3>
+                  <p>Git, GitHub, GitLab</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CI/CD</h3>
+                  <p>Jenkins, GitHub Actions</p>
+                </div>
+              </article>
+              
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Containerization</h3>
+                  <p>Docker ,DockerHub</p>
+                </div>
+              </article>
+            
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Operating system</h3>
+                  <p>Linux, Windows </p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Deployment & Configuration</h3>
+                  <p>Kubernetes, ECS ,EKS ,Ansible</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Automation & Programming</h3>
+                  <p>Shell Script, Python, Java, C/Cpp ,PHP </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <BR></BR>
+    <!-- <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="project-cards-container">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">CICD for Banking Application
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanket7133/CICD-for-Banking-Application'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />  
+            </div>
+            <h2 class="experience-sub-title project-title">AWS infra using Terraform </h2><h6>Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanket7133/AWS-ECS-infra-using-Terraform'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Jenkins Pipeline for Node App Deployment</h2><h6>Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanket7133/Jenkins-CICD-Node-App'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+
+          
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Jenkins Pipeline for Node App Deployment</h2><h6>Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanket7133/Jenkins-CICD-Node-App'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+        
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Jenkins Pipeline for Node App Deployment</h2><h6>Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanket7133/Jenkins-CICD-Node-App'"
+              >
+                Github
+              </button>
+              
+            </div>
+          </div>
+
+          </div>
+          <button class="next-button" id="next-button">
+            <img src="./assets/arrow.png" alt="Next" />
+          </button>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section> -->
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <BR>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="project-card">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            <h2 class="experience-sub-title project-title">CICD for Banking Application</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mrbhuvi/CICD-for-Banking-Application'">Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="project-card">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+            <h2 class="experience-sub-title project-title">AWS infra using Terraform</h2>
+            <h6 align="center">Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mrbhuvi/AWS-ECS-infra-using-Terraform'">Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="project-card">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+            <h2 class="experience-sub-title project-title">Jenkins Pipeline for Node App Deployment</h2>
+            <h6 align="center">Personal Project</h6>
+            <BR>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mrbhuvi/Jenkins-CICD-Node-App'">Github</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="project-card">
+            <img src="./assets/DeveloperHub.jfif" alt="Project 4" class="project-img" />
+            <h2 class="experience-sub-title project-title">DYPCET Developers Hub</h2><h6 align="center">Academic Project</h6><BR>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/mrbhuvi/DYPCET_Developers_Hub'">Github</button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more project cards here -->
+      </div>
+      <p align="Right" >Scroll -></p>
+    </section>
+    <BR></BR><BR></BR><BR></BR><BR></BR>
+    <section id="contact">
+      <p class="section__text__p1"><BR>Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:mrsanket264@gmail.com">shingadebhausaheb1@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/bhausaheb-shingade-685789208/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Bhausaheb Shingade. All Rights Reserved.</p>
+    </footer>
+
+    <script src="owlcarousel\docs\assets\vendors\jquery.min.js"></script>
+    <script src="owlcarousel/dist/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
